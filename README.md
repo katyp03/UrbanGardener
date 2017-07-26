@@ -60,6 +60,10 @@ rails g model user_recipe
 end' *
 
  ````
+## Building Search Function with Food2Fork api
+````
+rails g controller search index
+````
 ## Issues and Fixes
 
 ### Profile Page Setup

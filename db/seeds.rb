@@ -4,9 +4,9 @@ Plant.create ([
 ])
 
 User.create ([
-	{id: 1, fname: "Dennis", lname: "California", hometown: "Surf City", bio: "Yikes.", admin: true, propic: File.new("#{Rails.root}/app/assets/images/devito.png"), password: "password", email: "dennis@california.com"},
-	{id: 2, fname: "Katy", lname: "Pola", hometown: "New York", bio: "Stop it, Dennis.", admin: true, propic: File.new("#{Rails.root}/app/assets/images/devito2.jpg"), password: "password", email: "katyp03@gmail.com"},
-	{id: 3, fname: "Nick", lname: "Fehlinger", hometown: "New York", bio: "REALLY, stop it, Dennis.", admin: false, propic: File.new("#{Rails.root}/app/assets/images/devito3.jpg"), password: "password", email: "nick@nick.com"}
+	{id: 1, fname: "Dennis", lname: "California", hometown: "Surf City", bio: "Yikes.", admin: true, propic: File.new("#{Rails.root}/app/assets/images/devito.png"), password: "password", email: "dennis@california.com", username: "dennis"},
+	{id: 2, fname: "Katy", lname: "Pola", hometown: "New York", bio: "Stop it, Dennis.", admin: true, propic: File.new("#{Rails.root}/app/assets/images/devito2.jpg"), password: "password", email: "katyp03@gmail.com", username: "katy"},
+	{id: 3, fname: "Nick", lname: "Fehlinger", hometown: "New York", bio: "REALLY, stop it, Dennis.", admin: false, propic: File.new("#{Rails.root}/app/assets/images/devito3.jpg"), password: "password", email: "nick@nick.com", username: "nick"}
 ])
 
 UserPlant.create ([

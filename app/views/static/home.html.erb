@@ -1,1 +1,8 @@
-test
+<% if user_signed_in? %>
+  <div class="col-md-2 homelogin">
+    <p>Welcome, <%= current_user.fname %></p>
+    <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+  </div>
+<% else %>
+    <%= render file: "devise/sessions/new" %>
+<% end %>

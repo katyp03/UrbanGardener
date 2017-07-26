@@ -68,6 +68,8 @@ rails g controller search index
 
 * Create views
 
+* will fill out later
+
 ## Issues and Fixes
 
 ### Profile Page Setup

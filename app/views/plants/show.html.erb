@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong>Sname:</strong>
+  <%= @plant.sname %>
+</p>
+
+<p>
+  <strong>Care:</strong>
+  <%= @plant.care %>
+</p>
+
+<p>
+  <strong>Water:</strong>
+  <%= @plant.water %>
+</p>
+
+<p>
+  <strong>Sale:</strong>
+  <%= @plant.sale %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @plant.size %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @plant.image %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>

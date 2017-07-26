@@ -60,3 +60,34 @@ rails g model user_recipe
 end' *
 
  ````
+## Issues and Fixes
+
+### Profile Page Setup
+
+* In routes.rb add:
+````
+get '/:username' => 'static#profile'
+````
+
+* In static_controller.rb add:
+````
+def profile
+  @user = User.find_by_username(params[:username])
+end
+````
+### Registration and Edit Account Info
+
+* Create a registrations_controller and add
+````
+private
+
+def sign_up_params
+  params.require(:user).permit(:fname, :lname, :email, :username, :bio, :hometown, :password, :password_confirmation)
+end
+
+def account_update_params
+  params.require(:user).permit(:fname, :lname, :email, :username, :bio, :hometown, :password, :password_confirmation, :current_password)
+end
+````
+
+* Then edit the forms under views/devise/registrations to include added fields

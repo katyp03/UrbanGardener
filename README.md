@@ -64,6 +64,10 @@ end' *
 ````
 rails g controller search index
 ````
+* Create model
+
+* Create views
+
 ## Issues and Fixes
 
 ### Profile Page Setup

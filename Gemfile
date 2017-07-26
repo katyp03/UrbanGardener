@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 # Use paperclip gem for uploading images
 gem "paperclip", "~> 5.0.0"
+# Use httparty gem to query web services and examine the resulting output
+gem 'httparty'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -144,3 +144,35 @@ h2{
 }
 }
 // END of home and parallax
+
+// start of profile page:
+#userInfoDiv {
+	width: 80%;
+	margin: 0 auto;
+
+	#propicDiv {
+		float: left;
+		width: 180px;
+		height: 180px;
+
+		li#userPropic {
+			list-style-type: none;
+			width: 180px;
+			height: 180px;
+			background: cover;
+			background-image: no-repeat;
+			border-radius: 180px;
+		}
+	}
+
+	#infoDiv {
+		float: left;
+		width: 750px;
+		height: 200px;
+
+		#username {
+			font-size: 40px;
+		}
+	}
+}
+// end of profile page

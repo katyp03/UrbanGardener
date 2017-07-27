@@ -1,6 +1,6 @@
 <%= @user.full_name %>
 <% if @user.propic %>
-	<%= image_tag @user.propic.url %>
+	<%= image_tag @user.propic.url(:medium) %>
 <% else %>
 	<p>Nope, try again.</p>
 <% end %>

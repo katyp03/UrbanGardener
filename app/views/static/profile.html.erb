@@ -1,1 +1,6 @@
 <%= @user.full_name %>
+<% if @user.propic %>
+	<%= image_tag @user.propic.url %>
+<% else %>
+	<p>Nope, try again.</p>
+<% end %>

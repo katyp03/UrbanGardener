@@ -8,7 +8,7 @@ class User < ApplicationRecord
   has_many :user_recipes
   has_many :recipes, through: :user_recipes
   has_many :posts
-  has_attached_file :propic, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/images/default_pic.svg"
+  has_attached_file :propic, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/default_pic.svg"
   validates_attachment_content_type :propic, content_type: /\Aimage\/.*\z/
   validates :username, :presence => true, :uniqueness => { :case_sensitive => false }
   def full_name

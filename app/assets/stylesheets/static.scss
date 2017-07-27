@@ -146,35 +146,67 @@ h2{
 // END of home and parallax
 
 // start of profile page:
-#userInfoDiv {
+div.container {
 	width: 80%;
+	margin: 0 auto;
+	margin-top: 30px;
+	background-color: rgba(0, 77, 0, 0.2);
+	border-radius: 80px;
+	padding-top: 18px;
+
+#userInfoDiv {
+	// width: 100%;
 	margin: 0 auto;
 
 	#propicDiv {
-		float: left;
-		width: 180px;
-		height: 180px;
+		// width: 120px;
+		height: 120px;
+		padding-left: 140px;
+		padding-top: 4px;
 
 		li#userPropic {
 			list-style-type: none;
-			width: 180px;
-			height: 180px;
+			width: 120px;
+			height: 120px;
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
-			border-radius: 180px;
+			border-radius: 120px;
 			margin: 0;
 		}
 	}
 
-	#infoDiv {
-		float: left;
-		width: 750px;
-		height: 200px;
+	#nameDiv {
+		height: 150px;
+		text-align: left;
+		// padding-left: 150px;
+		padding-top: 8px;
 
 		#username {
 			font-size: 40px;
 		}
+
+		#userFullName {
+			font-size: 25px;
+		}
 	}
+
+	#userAboutDiv {
+		height: 150px;
+		// text-align: center;
+		padding-top: 20px;
+		padding-left: 20px;
+
+		#userHometown {
+			// text-align: center;
+			font-size: 18px;
+		}
+
+		#userBio {
+			// text-align: center;
+			font-size: 14px;
+		}
+	}
+}
 }
 // end of profile page

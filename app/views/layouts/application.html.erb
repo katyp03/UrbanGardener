@@ -10,8 +10,19 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="topnav">
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
+      <%= image_tag '/assets/logo.png', class: "navlogo" %>
+      <nav>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="yielddiv">
+      <%= yield %>
+    </div>
   </body>
 </html>

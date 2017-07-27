@@ -1,3 +1,23 @@
 // Place all the styles related to the search controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.searchpage {
+  width: 80vw;
+  margin: auto;
+  .searchplants {
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 10vh;
+    height: 40vh;
+    border-radius: 25px;
+    position: fixed;
+    form {
+      input {
+        display: inline-block;
+      }
+      label {
+        display: inline-block;
+      }
+    }
+  }
+}

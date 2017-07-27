@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root "static#home"
   get '/search' => 'search#index'
-  get '/:username' => 'static#profile'
+  get '/:username' => 'static#profile', as: :profile
 end

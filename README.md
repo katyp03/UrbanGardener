@@ -34,7 +34,7 @@ rails g model user_plant
 rails g migration UserRecipe
 rails g model user_recipe
 ````
-## Fixing Database
+## Adjusting Database
 ````
 * in migration files for user_plant and user_recipe add -> '  def change
     create_table :user_plants, id: false do |t|
@@ -68,7 +68,27 @@ rails g controller search index
 
 * Create views
 
-* will fill out later!!!!
+* Generate get and push in routes
+
+* Create a search form implementing checkboxes:
+````
+<%= form_tag(search_path, :method => "post", id: "search-form") do %>
+  <% current_user.plants.each do |plant| %>
+    <%= label_tag :to, plant.name %>
+    <%= check_box_tag :'looking_for[]', params[:looking_for], {:multiple => true}, value: plant.name %>
+  <% end %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+````
+
+* Define search term and change array, if multiple, to a comma separated string
+````
+  def index
+    @search_term = params[:looking_for]
+    @search_term = @search_term.join(', ') if @search_term.is_a? Array
+  	@search = Search.for(@search_term)
+  end
+````
 
 ## Issues and Fixes
 

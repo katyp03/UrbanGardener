@@ -16,27 +16,30 @@
   <% else %>
   <% end %>
 
-  <div class="col-md-offset-5 col-md-7">
+  <div class="searchresults col-md-offset-5 col-md-7">
     <h1>Searching for - <%= @search_term %></h1>
     <p>Powered By Food2Fork.com</p>
     <% if (@search.nil? or @search == []) %>
-    <p> <h2>No recipes found.. Sorry</h2></p>
+    <h2>No recipes found.. Sorry</h2>
     <% else %>
 
-    <table class="searchresults" border="1">
+    <!-- <table class="searchresults" border="1">
      <tr>
      <th>Image</th>
      <th>Name</th>
      <th>Rank</th>
-     </tr>
-     <% @search.each do |course| %>
-     <tr class=<%= cycle('even', 'odd') %>>
-     <td><%= link_to(image_tag(course["image_url"], height: '100', width: '100'), course["f2f_url"])%></td>
-     <td><%= link_to(course["title"], course["f2f_url"]) %></td>
-     <td><%= course["social_rank"] %></td>
-     </tr>
-     <% end %>
-    </table>
+    </tr> -->
+    <% @search.each do |course| %>
+
+      <%= link_to(course["f2f_url"]) do %>
+        <div class="searchresult">
+          <span class="resultimage"><%= image_tag(course["image_url"], height: '100', width: '100') %></span>
+          <span class="resultname"><%= course["title"] %></span>
+        </div>
+      <% end %>
+
+    <% end %>
+    <!-- </table> -->
     <% end %>
   </div>
 </div>

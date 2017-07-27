@@ -1,3 +1,12 @@
-<%= @user.full_name %>
-
-	<%= image_tag @user.propic.url(:medium) %>
+<div id="userInfoDiv">
+	<div id="propicDiv">
+		<li id="userPropic" style="background-image:url(<%= User.find(@user.id).propic(:medium) %>)">
+		</li>
+	</div>
+	<div id="infoDiv">
+		<span id="username"><strong><%= @user.username %></strong></span><br />
+		<span id="userFullName"><%= @user.full_name %></span><br />
+		<span id="userHometown"><%= @user.hometown %></span><br />
+		<span id="userBio"><%= @user.bio %></span>
+	</div>
+</div>

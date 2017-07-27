@@ -16,7 +16,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-
 $(document).ready(function(){
         $('#nav').localScroll(800);
         $('#intro').parallax("50%", 0.1);

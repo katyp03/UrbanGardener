@@ -5,6 +5,6 @@ class Search
   format :json
 
   def self.for term
-    get("/search", query: { q: term})["recipes"]
+    post("/search", query: { q: term})["recipes"]
   end
 end

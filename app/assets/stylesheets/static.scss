@@ -159,9 +159,11 @@ h2{
 			list-style-type: none;
 			width: 180px;
 			height: 180px;
-			background: cover;
-			background-image: no-repeat;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
 			border-radius: 180px;
+			margin: 0;
 		}
 	}
 

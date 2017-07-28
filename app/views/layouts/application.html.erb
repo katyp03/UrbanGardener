@@ -21,8 +21,10 @@
       <a href='/'><%= image_tag '/assets/logo2.png', class: "navlogo2" %></a>
       <nav>
         <ul>
-          <li>1</li>
-          <li>2</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/<%= current_user.username %>">Profile</a></li>
+          <li><a href="/plants">Plants</a></li>
+          <li><a href="/search">Find Recipes</a></li>
         </ul>
       </nav>
     </div>

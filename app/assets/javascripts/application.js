@@ -24,7 +24,7 @@ $(document).ready(function(){
         $('#third').parallax("50%", 0.3);
 })
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("turbolinks:load", function(){
 
   $('.navlogo2').hide();
 

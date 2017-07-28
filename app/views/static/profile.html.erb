@@ -1,17 +1,22 @@
 <div class="container">
 
-<div id="userInfoDiv" class="row">
-	<div id="propicDiv" class="col-md-4">
-		<li id="userPropic" style="background-image:url(<%= User.find(@user.id).propic(:medium) %>)">
-		</li>
+	<div id="userInfoDiv" class="row">
+		<div id="propicDiv" class="col-md-4">
+			<li id="userPropic" style="background-image:url(<%= User.find(@user.id).propic(:medium) %>)">
+			</li>
+		</div>
+		<div id="nameDiv" class="col-md-3">
+			<span id="username"><strong><%= @user.username %></strong></span><br />
+			<span id="userFullName"><%= @user.full_name %></span><br />
+		</div>
+		<div id="userAboutDiv" class="col-md-5">
+			<span id="userHometown"><i><%= @user.hometown %></i></span><br /><br />
+			<span id="userBio"><%= @user.bio %></span>
+		</div>
 	</div>
-	<div id="nameDiv" class="col-md-3">
-		<span id="username"><strong><%= @user.username %></strong></span><br />
-		<span id="userFullName"><%= @user.full_name %></span><br />
+
+	<div id="userPlantsDiv" class="col-md-3">
+
 	</div>
-	<div id="userAboutDiv" class="col-md-5">
-		<span id="userHometown"><i><%= @user.hometown %></i></span><br /><br />
-		<span id="userBio"><%= @user.bio %></span>
-	</div>
-</div>
+
 </div>

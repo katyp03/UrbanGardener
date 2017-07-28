@@ -4,8 +4,6 @@
   <% @plants.each do |plant| %>
         <span class="plantPreview">
         <%= image_tag plant.image.url %><br />
-        <%= plant.name %><br />
-
         <%= link_to 'Show', plant %>
         <%= link_to 'Edit', edit_plant_path(plant) %>
         <%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></span>

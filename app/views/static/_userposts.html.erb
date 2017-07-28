@@ -4,9 +4,9 @@
 			<h3>Add some posts to your profile!</h3>
 		<% else %>
 			<% current_user.posts.each do |post| %>
-				<span class="postPreview">
+				<a class="postPreview" href="/posts/<%= post.id %>">
 				<%= image_tag post.picture.url %><br />
-				<%= post.caption %></span>
+				<%= post.caption %></a>
 			<% end %>
 		<% end %>
 </div>

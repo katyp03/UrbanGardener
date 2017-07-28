@@ -1,1 +1,11 @@
-<h1>My Posts</h1>
+<div id="userPostPage">
+	<h1>My Posts</h1>
+		<% if (current_user.posts.nil? or current_user.posts == []) %>
+			<h3>Add some posts to your profile!</h3>
+		<% else %>
+			<% current_user.posts.each do |post| %>
+				<span id="postPreview"><%= image_tag post.picture.url %><br />
+				<%= post.caption %></span>
+			<% end %>
+		<% end %>
+</div>

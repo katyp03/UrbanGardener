@@ -153,18 +153,21 @@ div.container {
 	margin: 0 auto;
 	margin-top: 30px;
 	margin-bottom: 50px;
-	background-color: rgba(0, 77, 0, 0.2);
 	border-radius: 80px;
 	padding-top: 18px;
 
 #userInfoDiv {
 	// width: 100%;
 	margin: 0 auto;
+	margin-bottom: 50px;
+	border-radius: 80px;
+	background-color: rgba(0, 77, 0, 0.1);
+	box-shadow: 5px 5px 3px;
 
 	#propicDiv {
 		height: 120px;
 		padding-left: 140px;
-		padding-top: 4px;
+		padding-top: 14px;
 
 		li#userPropic {
 			list-style-type: none;
@@ -181,7 +184,7 @@ div.container {
 	#nameDiv {
 		height: 150px;
 		text-align: left;
-		padding-top: 8px;
+		padding-top: 18px;
 
 		#username {
 			font-size: 40px;
@@ -194,7 +197,7 @@ div.container {
 
 	#userAboutDiv {
 		height: 150px;
-		padding-top: 20px;
+		padding-top: 24px;
 		padding-left: 20px;
 
 		#userHometown {
@@ -206,5 +209,38 @@ div.container {
 		}
 	}
 }
+
+#userNavDiv {
+	height: 350px;
+	background: linear-gradient(#8cd98c , #ecf8ec);
+	border-radius: 50px;
+	position: fixed;
+	overflow-y: scroll;
+
+	h3 {
+		padding-left: 10px;
+		padding-top: 30px;
+		cursor: pointer;
+	}
+}
+
+#userRenderDiv {
+	height: 800px;
+	border: 1px solid gray;
+	text-align: center;
+
+	.hidePlants {
+		display: block;
+	}
+
+	.hidePosts {
+		display: none;
+	}
+
+	.hideRecipes {
+		display: none;
+	}
+}
+
 }
 // end of profile page

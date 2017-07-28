@@ -1,4 +1,4 @@
-class UserPlants < ActiveRecord::Migration[5.1]
+class UserPlant < ActiveRecord::Migration[5.1]
   def change
   	create_table :user_plants, id: false do |t|
      t.belongs_to :user

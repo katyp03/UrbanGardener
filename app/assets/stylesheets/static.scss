@@ -24,6 +24,7 @@ p, ul{
         font-size-adjust:0.488;
         font-weight:200;
         font-style:normal;
+				padding: 0 15px;
 }
 
 img{
@@ -43,6 +44,7 @@ h2{
         font-size-adjust:0.531;
         font-weight:500;
         font-style:normal;
+				padding: 0 15px;
 }
 
 #header h1, #pixels{
@@ -67,15 +69,6 @@ h2{
         text-align: center;
 }
 
-#nav{
-        list-style: none;
-        position: fixed;
-        right: 20px;
-}
-
-#nav li{
-        margin: 0 0 15px 0;
-}
 
 #header, #intro, #second{
         width: 100%;
@@ -85,7 +78,7 @@ h2{
         background:url("/assets/homeplant1.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: black;
-        height: 660px;
+        height: 90vh;
         margin: 0 auto;
         padding: 0;
         width: 100%;
@@ -95,30 +88,30 @@ h2{
         background: url("/assets/homeplant2.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: white;
-        height: 800px;
+        height: 90vh;
         margin: 0 auto;
         overflow: hidden;
         padding: 0;
         width: 100%;
 }
 
-// #second .bg{
-//         background: url("/assets/can.png") 50% 0 no-repeat fixed;
-//         height: 850px;
-//         margin: 0 auto;
-//         padding: 0;
-//         position: absolute;
-//         z-index: 200;
-//         max-width: 1900px;
-// 		width: 80%;
-//         overflow: hidden;
-// }
+#second .bg{
+         background: url("/assets/lilpic.png") 50% 0 no-repeat fixed;
+         height: 850px;
+         margin: 0 auto;
+         padding: 0;
+         position: absolute;
+         z-index: 200;
+         max-width: 1900px;
+ 		width: 80%;
+         overflow: hidden;
+ }
 
 #third{
         background: url("/assets/homeplant3.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: black;
-        height: 825px;
+        height: 98vh;
         padding: 100px 0 0 0;
         width: 100%;
         overflow: hidden;

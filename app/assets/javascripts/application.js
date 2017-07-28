@@ -23,3 +23,30 @@ $(document).ready(function(){
         $('.bg').parallax("50%", 0.4);
         $('#third').parallax("50%", 0.3);
 })
+
+document.addEventListener("DOMContentLoaded", function(){
+
+  $('.navlogo2').hide();
+
+  $('.navlogo').hover(
+    function(){
+      $('.navlogo').hide();
+      $('.navlogo2').show();
+    },
+    function(){
+      $('.navlogo2').hide();
+      $('.navlogo').show();
+    }
+  )
+  $('.navlogo2').hover(
+    function(){
+      $('.navlogo').hide();
+      $('.navlogo2').show();
+    },
+    function(){
+      $('.navlogo2').hide();
+      $('.navlogo').show();
+    }
+  )
+
+});

@@ -4,9 +4,8 @@
 			<h3>Add some plants to your profile to get started!</h3>
 		<% else %>
 			<% current_user.plants.each do |plant| %>
-				<span class="plantPreview">
-				<%= image_tag plant.image.url %><br />
-				<%= plant.name %></span>
+				<a class="plantPreview" href="/plants/<%= plant.id %>">
+				<%= image_tag plant.image.url %></a>
 			<% end %>
 		<% end %>
-</div>s
+</div>

@@ -30,8 +30,8 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @plant.image %>
-  <%= image_tag plant.image.url %>
+  <!-- <%# @plant.image %> -->
+  <%= image_tag @plant.image.url %>
 </p>
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |

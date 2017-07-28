@@ -37,9 +37,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :size %>
-    <%= form.number_field :size, id: :plant_size %>
-  </div>
+    <%= form.label :Size %><br />
+    <%= form.radio_button(:size, 0) %>
+    <%= label_tag(:size, "Small: <12in") %>
+    <%= form.radio_button(:size, 1) %>
+    <%= label_tag(:size, "Medium: 12-24in") %>
+    <%= form.radio_button(:size, 2) %>
+    <%= label_tag(:size, "Large: >24in") %>
+  </div><br />
 
   <div class="field">
     <%= form.label :image %>

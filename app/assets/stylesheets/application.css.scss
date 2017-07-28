@@ -27,17 +27,26 @@ html {
   .topnav {
     background: linear-gradient(#808080 , #fff);
     .navlogo {
-      max-width: 10%;
+      max-width: 15%;
+      display: inline-block;
+      margin: 2vh 10vw;
     }
     .navlogo2 {
-      max-width: 10%;
+      max-width: 15%;
+      display: inline-block;
+      margin: 2vh 10vw;
     }
     nav {
       text-align: center;
+      display: inline-block;
+      // margin-left: 10vw;
+      vertical-align: bottom;
       ul {
         list-style: none;
         li {
           display: inline-block;
+          padding: 0 5vw;
+          padding-bottom: 3vh;
         }
       }
     }

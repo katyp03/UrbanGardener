@@ -23,12 +23,6 @@
     <h2>No recipes found.. Sorry</h2>
     <% else %>
 
-    <!-- <table class="searchresults" border="1">
-     <tr>
-     <th>Image</th>
-     <th>Name</th>
-     <th>Rank</th>
-    </tr> -->
     <% @search.each do |course| %>
 
       <%= link_to(course["f2f_url"]) do %>

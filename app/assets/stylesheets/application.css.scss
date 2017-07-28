@@ -29,12 +29,12 @@ html {
     .navlogo {
       max-width: 15%;
       display: inline-block;
-      margin: 2vh 10vw;
+      margin: 2vh 5vw 2vh 10vw;
     }
     .navlogo2 {
       max-width: 15%;
       display: inline-block;
-      margin: 2vh 10vw;
+      margin: 2vh 5vw 2vh 10vw;
     }
     nav {
       text-align: center;
@@ -45,8 +45,18 @@ html {
         list-style: none;
         li {
           display: inline-block;
-          padding: 0 5vw;
+          padding: 0 3vw;
           padding-bottom: 3vh;
+          font-size: 2vh;
+          a {
+            color: #666;
+            padding: 1vh;
+          }
+          a:hover {
+            background-color: rgba(255,255,255,0.4);
+            border-radius: 25px;
+            text-decoration: none;
+          }
         }
       }
     }

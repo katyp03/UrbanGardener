@@ -1,5 +1,5 @@
 <div class="container">
-
+	<!-- div with username, full name, profile picture, other user info -->
 	<div id="userInfoDiv" class="row">
 		<div id="propicDiv" class="col-md-4">
 			<li id="userPropic" style="background-image:url(<%= User.find(@user.id).propic(:medium) %>)">
@@ -14,13 +14,13 @@
 			<span id="userBio"><%= @user.bio %></span>
 		</div>
 	</div>
-
+	<!-- fixed div to navigate profile page -->
 	<div id="userNavDiv" class="col-md-2">
 		<span class="myPlantsLink"><h3>My Plants</h3></span><br />
 		<span class="myPostsLink"><h3>My Posts</h3></span><br />
 		<span class="myRecipesLink"><h3>My Recipes</h3></span>
 	</div>
-
+	<!-- div where pages render for a user's saved plants, posts, and recipes; renders the plants first, when page loads -->
 	<div id="userRenderDiv" class="col-md-offset-3 col-md-9">
 		<span class="hidePlants"><%= render 'userplants', static: @static %></span>
 		<span class="hidePosts"><%= render 'userposts', static: @static %></span>

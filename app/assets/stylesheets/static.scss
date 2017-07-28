@@ -244,3 +244,26 @@ div.container {
 
 }
 // end of profile page
+
+// start of user plant partial page:
+#userPlantPage {
+	img {
+		width: 250px;
+		height: 250px;
+	}
+}
+// end of user plant partial page
+
+// start of user post partial page, and some user recipe partial page:
+#userPostPage, #userRecipePage {
+	span#postPreview, span#recipePreview {
+		width: 300px;
+		height: 300px;
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+	}
+}
+// end of user post partial page

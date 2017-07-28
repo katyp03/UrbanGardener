@@ -24,7 +24,7 @@
     <% else %>
 
     <% @search.each do |course| %>
-
+      <!-- for every search result list them and link the div to the recipe page -->
       <%= link_to(course["f2f_url"]) do %>
         <div class="searchresult">
           <div class="resultimage"><%= image_tag(course["image_url"], height: '100', width: '100') %></div>
@@ -34,7 +34,6 @@
         <div class="addrecipe">Add Recipe</div>
 
     <% end %>
-    <!-- </table> -->
     <% end %>
   </div>
 </div>

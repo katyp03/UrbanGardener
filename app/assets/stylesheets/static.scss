@@ -80,7 +80,7 @@ h2{
 }
 
 #intro{
-        background:url("https://www.resortcollection.com/wp-content/themes/resortcollection/property-images/summit/summit-beach-resort-panama-city-beach-fl-beach-01.jpg") 50% 0 no-repeat fixed;
+        background:url("/assets/homeplant1.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: black;
         height: 600px;
@@ -90,7 +90,7 @@ h2{
 }
 
 #second{
-        background: url("http://www.moveabroadnow.com/wp-content/uploads/italy1.jpg") 50% 0 no-repeat fixed;
+        background: url("/assets/homeplant2.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: white;
         height: 1300px;
@@ -101,19 +101,19 @@ h2{
 }
 
 #second .bg{
-        background: url("http://www.pngall.com/wp-content/uploads/2016/03/Wine-PNG.png") 50% 0 no-repeat fixed;
+        background: url("/assets/can.png") 50% 0 no-repeat fixed;
         height: 1300px;
         margin: 0 auto;
         padding: 0;
         position: absolute;
         z-index: 200;
         max-width: 1900px;
-		width: 100%;
+		width: 80%;
         overflow: hidden;
 }
 
 #third{
-        background: url("http://travel.home.sndimg.com/content/dam/images/travel/fullset/2015/08/03/top-florida-beaches/key-west-beach-florida.jpg.rend.hgtvcom.966.725.suffix/1494225469260.jpeg") 50% 0 no-repeat fixed;
+        background: url("/assets/homeplant3.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: black;
         height: 650px;
@@ -150,6 +150,7 @@ div.container {
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 30px;
+	margin-bottom: 50px;
 	background-color: rgba(0, 77, 0, 0.2);
 	border-radius: 80px;
 	padding-top: 18px;
@@ -159,7 +160,6 @@ div.container {
 	margin: 0 auto;
 
 	#propicDiv {
-		// width: 120px;
 		height: 120px;
 		padding-left: 140px;
 		padding-top: 4px;
@@ -179,7 +179,6 @@ div.container {
 	#nameDiv {
 		height: 150px;
 		text-align: left;
-		// padding-left: 150px;
 		padding-top: 8px;
 
 		#username {
@@ -193,17 +192,14 @@ div.container {
 
 	#userAboutDiv {
 		height: 150px;
-		// text-align: center;
 		padding-top: 20px;
 		padding-left: 20px;
 
 		#userHometown {
-			// text-align: center;
 			font-size: 18px;
 		}
 
 		#userBio {
-			// text-align: center;
 			font-size: 14px;
 		}
 	}

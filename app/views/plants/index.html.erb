@@ -1,39 +1,17 @@
-<p id="notice"><%= notice %></p>
-
+<div id="plantIndexPage">
 <h1>Plants</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Sname</th>
-      <th>Care</th>
-      <th>Water</th>
-      <th>Sale</th>
-      <th>Size</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <% @plants.each do |plant| %>
+        <span class="plantPreview">
+        <%= image_tag plant.image.url %><br />
+        <%= plant.name %><br />
 
-  <tbody>
-    <% @plants.each do |plant| %>
-      <tr>
-        <td><%= plant.name %></td>
-        <td><%= plant.sname %></td>
-        <td><%= plant.care %></td>
-        <td><%= plant.water %></td>
-        <td><%= plant.sale %></td>
-        <td><%= plant.size %></td>
-        <td><%= plant.image %></td>
-        <td><%= link_to 'Show', plant %></td>
-        <td><%= link_to 'Edit', edit_plant_path(plant) %></td>
-        <td><%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <%= link_to 'Show', plant %>
+        <%= link_to 'Edit', edit_plant_path(plant) %>
+        <%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+  <% end %>
 
-<br>
+<br />
 
-<%= link_to 'New Plant', new_plant_path %>
+  <%= link_to 'New Plant', new_plant_path %>
+</div>

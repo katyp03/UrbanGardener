@@ -4,7 +4,8 @@
 			<h3>Save some recipes to your profile! Go to "Find Recipes" to browse.</h3>
 		<% else %>
 			<% current_user.recipes.each do |recipe| %>
-				<span id="recipePreview"><%= image_tag recipe.rpic.url %><br />
+				<span class="recipePreview">
+				<%= image_tag recipe.rpic.url %><br />
 				<%= recipe.title %></span>
 			<% end %>
 		<% end %>

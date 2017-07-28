@@ -33,10 +33,11 @@
 
       <%= link_to(course["f2f_url"]) do %>
         <div class="searchresult">
-          <span class="resultimage"><%= image_tag(course["image_url"], height: '100', width: '100') %></span>
-          <span class="resultname"><%= course["title"] %></span>
+          <div class="resultimage"><%= image_tag(course["image_url"], height: '100', width: '100') %></div>
+          <div class="resultname"><%= course["title"] %></div>
         </div>
       <% end %>
+        <div class="addrecipe">Add Recipe</div>
 
     <% end %>
     <!-- </table> -->

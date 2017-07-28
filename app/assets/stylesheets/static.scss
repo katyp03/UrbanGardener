@@ -246,19 +246,16 @@ div.container {
 // end of profile page
 
 // start of user plant partial page:
-#userPlantPage {
-	img {
-		width: 250px;
-		height: 250px;
-	}
-}
+
 // end of user plant partial page
 
-// start of user post partial page, and some user recipe partial page:
-#userPostPage, #userRecipePage {
-	span#postPreview, span#recipePreview {
+// start of user post partial page, and some user recipe partial page and user plant partial page:
+#userPostPage, #userRecipePage, #userPlantPage, #plantIndexPage {
+
+	span.postPreview, span.recipePreview, span.plantPreview {
 		width: 300px;
 		height: 300px;
+		display: inline-block;
 
 		img {
 			width: 150px;

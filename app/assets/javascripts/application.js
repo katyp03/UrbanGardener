@@ -26,6 +26,7 @@ $(document).ready(function(){
 
 document.addEventListener("turbolinks:load", function(){
 
+  // logo changing on hover
   $('.navlogo2').hide();
 
   $('.navlogo').hover(

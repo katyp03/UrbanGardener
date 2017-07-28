@@ -1,6 +1,6 @@
 <div class="searchpage">
   <% if user_signed_in? %>
-    <div class="searchplants col-md-offset-1 col-md-2">
+    <div class="searchplants col-md-2">
       <h3>My plants:</h3>
       <!-- Build out a searchform -->
       <%= form_tag(search_path, :method => "post", id: "search-form") do %>
@@ -16,7 +16,7 @@
   <% else %>
   <% end %>
 
-  <div class="searchresults col-md-offset-5 col-md-7">
+  <div class="searchresults col-md-offset-4 col-md-7">
     <h1>Searching for - <%= @search_term %></h1>
     <p>Powered By Food2Fork.com</p>
     <% if (@search.nil? or @search == []) %>

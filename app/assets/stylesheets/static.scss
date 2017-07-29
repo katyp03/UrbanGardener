@@ -86,7 +86,7 @@ h2{
 
 #second{
         background: url("/assets/homeplant2.jpg") 50% 0 no-repeat fixed;
-		background-size: cover;
+				background-size: cover;
         color: white;
         height: 90vh;
         margin: 0 auto;
@@ -97,13 +97,12 @@ h2{
 
 #second .bg{
          background: url("/assets/lilpic.png") 50% 0 no-repeat fixed;
-         height: 850px;
+         height: 800px;
          margin: 0 auto;
          padding: 0;
          position: absolute;
          z-index: 200;
-         max-width: 1900px;
- 		width: 80%;
+				 width: 70%;
          overflow: hidden;
  }
 
@@ -111,7 +110,7 @@ h2{
         background: url("/assets/homeplant3.jpg") 50% 0 no-repeat fixed;
 		background-size: cover;
         color: black;
-        height: 98vh;
+        height: 97vh;
         padding: 100px 0 0 0;
         width: 100%;
         overflow: hidden;

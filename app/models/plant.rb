@@ -1,5 +1,5 @@
 class Plant < ApplicationRecord
-	enum size: [:Small, :Medium, :Large]
+	# enum size: [:Small, :Medium, :Large]
 	has_many :user_plants
 	has_many :users, through: :user_plants
 	has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/default_pic.svg"

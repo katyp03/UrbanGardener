@@ -16,14 +16,6 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$(document).ready(function(){
-        $('#nav').localScroll(800);
-        $('#intro').parallax("50%", 0.1);
-        $('#second').parallax("50%", 0.1);
-        $('.bg').parallax("50%", 0.4);
-        $('#third').parallax("50%", 0.3);
-})
-
 document.addEventListener("turbolinks:load", function(){
 
   // logo changing on hover
@@ -49,5 +41,13 @@ document.addEventListener("turbolinks:load", function(){
       $('.navlogo').show();
     }
   )
+
+  $(document).ready(function(){
+          $('#nav').localScroll(800);
+          $('#intro').parallax("50%", 0.1);
+          $('#second').parallax("50%", 0.1);
+          $('.bg').parallax("50%", 0.4);
+          $('#third').parallax("50%", 0.3);
+  })
 
 });

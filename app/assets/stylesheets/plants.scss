@@ -4,3 +4,33 @@
 	margin: 0 auto;
 }
 // end of plant index
+
+// start of plant show page:
+#plantShowPage {
+	margin: 0 auto;
+	margin-top: 80px;
+
+	#plantShowInfo {
+		width: 40%;
+		margin-left: 150px;
+		margin-top: 30px;
+
+		strong.plantName {
+			font-size: 40px;
+		}
+
+		a.buyLink {
+			cursor: pointer;
+		}
+	}
+
+	#plantShowPic {
+		width: 40%;
+		padding-left: 60px;
+		img {
+			height: 50vh;
+			padding-left: 20px; 
+		}
+	}
+}
+// end of plant show page

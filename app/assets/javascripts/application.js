@@ -42,12 +42,28 @@ document.addEventListener("turbolinks:load", function(){
     }
   )
 
-  $(document).ready(function(){
+  // $(document).ready(function(){
           $('#nav').localScroll(800);
           $('#intro').parallax("50%", 0.1);
           $('#second').parallax("50%", 0.1);
           $('.bg').parallax("50%", 0.4);
           $('#third').parallax("50%", 0.3);
-  })
+  // })
+
+  // function signInModalShow(){
+  //   document.getElementById('signInModal').style.display = "block";
+  // };
+
+  // function closeModal() {
+  //   document.getElementById('signInModal').style.display = "none";
+  // };
 
 });
+
+function signInModalShow(){
+    document.getElementById('signInModal').style.display = "block";
+};
+
+function closeModal() {
+    document.getElementById('signInModal').style.display = "none";
+};

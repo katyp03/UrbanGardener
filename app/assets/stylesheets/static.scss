@@ -24,7 +24,7 @@ p, ul{
         font-size-adjust:0.488;
         font-weight:200;
         font-style:normal;
-				padding: 0 15px;
+		padding: 0 15px;
 }
 
 img{
@@ -37,6 +37,7 @@ h1, #pixels{
         font-size-adjust:0.40;
         font-weight:700;
         font-style:normal;
+        font-size: 28px;
 }
 
 h2{
@@ -53,13 +54,13 @@ h2{
 
 .float-left{
         float: left;
-        margin: 0 0 0 20px;
+        margin: 0 0 0 10px;
         background-color: rgba(255, 255, 255, 0.6);
 }
 
 .float-right{
         float: right;
-        margin: 0 20px 0 0;
+        margin: 0 10px 0 0;
         background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -129,12 +130,17 @@ h2{
         min-width: 980px;
         overflow: auto;
         width: 980px;
+
+        p {
+        	font-size: 22px;
+        	line-height: 1.3;
+        }
 }
 
 .story .float-left, .story .float-right{
-        padding: 100px 0 0 0;
+        padding: 80px 0 0 0;
         position: relative;
-        width: 350px;
+        width: 400px;
 }
 }
 // END of home and parallax

@@ -1,10 +1,12 @@
-<p>
-  <strong>Name:</strong>
-  <%= @plant.name %>
-</p>
+<div id="plantShowPage">
+  <div id="plantShowInfo" class="col-sm-6">
 
 <p>
-  <strong>Sname:</strong>
+  <strong class ="plantName"><%= @plant.name %></strong>
+</p><br /><br />
+
+<p>
+  <strong>Botanical Name:</strong>
   <%= @plant.sname %>
 </p>
 
@@ -15,12 +17,7 @@
 
 <p>
   <strong>Water:</strong>
-  <%= @plant.water %>
-</p>
-
-<p>
-  <strong>Sale:</strong>
-  <%= @plant.sale %>
+  <%= @plant.water %> times per week
 </p>
 
 <p>
@@ -29,10 +26,18 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <!-- <%# @plant.image %> -->
-  <%= image_tag @plant.image.url %>
+  <strong>Buy what you need to get started:</strong>
+  <a href="<%= @plant.sale %>" class="buyLink">Get Seeds</a>
 </p>
 
+  </div>
+  <div id="plantShowPic" class="col-sm-6">
+  <!-- <%# @plant.image %> -->
+  <%= image_tag @plant.image.url %>
+  </div>
+
+<br />
 <%= link_to 'Edit', edit_plant_path(@plant) %> |
 <%= link_to 'Back', plants_path %>
+
+</div>

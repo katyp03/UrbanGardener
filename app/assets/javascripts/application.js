@@ -54,16 +54,16 @@ document.addEventListener("turbolinks:load", function(){
 // making sign in modal show and close
 function signInModalShow(){
   document.getElementById('signInModal').style.display = "block";
-  // document.getElementById('signUpLink').style.display = "block";
+  // document.getElementById('signUpButton').style.display = "block";
   document.getElementById('signInLink').style.display = "none";
   document.getElementById('signUpForm').style.display = "none";
 }
 // making sign up form render from sign in form in modal
 function signUpFormShow(){
   document.getElementById('signInForm').style.display = "none";
-  document.getElementById('signUpLink').style.display = "none";
   document.getElementById('signUpForm').style.display = "block";
   document.getElementById('signInLink').style.display = "block";
+  document.getElementById('signUpButton').style.display = "none";
 }
 // making modal close when you click "close" button
 function closeModal() {

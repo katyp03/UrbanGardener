@@ -3,10 +3,11 @@
 
   <% @plants.each do |plant| %>
         <span class="plantPreview">
-        <%= image_tag plant.image.url %><br />
-        <%= link_to 'Show', plant %>
-        <%= link_to 'Edit', edit_plant_path(plant) %>
-        <%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        	<a href="/plants/<%= plant.id %>">
+        	<%= image_tag plant.image.url %></a><br />
+        	<%= link_to 'Edit', edit_plant_path(plant) %>
+        	<%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </span>
   <% end %>
 
 <br />

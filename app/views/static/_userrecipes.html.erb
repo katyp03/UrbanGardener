@@ -4,9 +4,12 @@
 			<h3>Save some recipes to your profile! Go to <a href="/search">Find Recipes</a> to browse.</h3>
 		<% else %>
 			<% @user.recipes.each do |recipe| %>
-				<a class="recipePreview" href="<%= recipe.rsite %>">
-				<%= image_tag recipe.rpic %><br />
-				<%= recipe.title %></a>
+				<span class ="recipeDiv">
+					<a class="recipePreview" href="<%= recipe.rsite %>">
+						<%= image_tag recipe.rpic %><br />
+						<%= recipe.title %></a><br />
+					<%= button_to 'Remove Recipe', recipe_remove_path(recipe) %>
+				</span>
 			<% end %>
 		<% end %>
 </div>

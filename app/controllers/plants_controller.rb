@@ -13,10 +13,16 @@ class PlantsController < ApplicationController
   def show
   end
 
+  # Add plants to userplants
   def add
+    # define current user
    @user = current_user
+    # look for the plant by plant.id
    @plant = Plant.find(params[:id])
-   if UserPlant.find_by(plant_id: params[:id], user_id: current_user.id)
+    # define if the userplant table exists
+   @userplant = UserPlant.find_by(plant_id: params[:id], user_id: current_user.id)
+   if @userplant
+    #  if it doesnt exist, then push the plant into the userplant join table
    else
      @user.plants << @plant
    end

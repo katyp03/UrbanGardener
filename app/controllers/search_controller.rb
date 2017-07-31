@@ -13,4 +13,7 @@ class SearchController < ApplicationController
     @search_term = @search_term.join(', ') if @search_term.is_a? Array
   	@search = Search.for(@search_term)
   end
+  def add
+    
+  end
 end

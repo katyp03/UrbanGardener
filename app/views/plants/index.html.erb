@@ -5,8 +5,13 @@
         <span class="plantPreview">
         	<a href="/plants/<%= plant.id %>">
         	<%= image_tag plant.image.url %></a><br />
-          <%= button_to 'Add Plant', plant_add_path(plant) %>
-          <%= button_to 'Remove Plant', plant_remove_path(plant) %>
+
+          <% if UserPlant.find_by(plant_id: plant.id, user_id: current_user.id) %>
+            <%= button_to 'Remove Plant', plant_remove_path(plant) %>
+          <% else %>
+            <%= button_to 'Add Plant', plant_add_path(plant) %>
+          <% end %>
+
           <% if user_signed_in? && current_user.admin? %>
           <br>
         	<%= link_to 'Edit', edit_plant_path(plant) %>

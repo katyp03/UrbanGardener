@@ -1,19 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Picture:</strong>
-  <%= @post.picture %>
+  <%= image_tag @post.picture.url(:medium) %>
 </p>
 
 <p>
-  <strong>Caption:</strong>
-  <%= @post.caption %>
+  <strong><%= @post.caption %></strong>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.username %>
 </p>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+  <li><%= comment.body %> - @<%= comment.user.username %></li>
+  <% end %>
+</ul>
+<% if user_signed_in? %>
+<%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+<% else %>
+<% end %>

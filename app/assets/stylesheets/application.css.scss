@@ -87,10 +87,19 @@ div#signInModal {
       margin-left: 140px;
     }
 
+    p#signUpLink {
+      cursor: pointer;
+    }
+
     #signUpForm {
       margin: 0 auto;
       height: 60vh;
       overflow-y: scroll;
+
+      p#signInLink {
+        cursor: pointer;
+        
+      }
     }
 }
 // end of sign in/sign up modal

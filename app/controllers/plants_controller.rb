@@ -26,6 +26,7 @@ class PlantsController < ApplicationController
    else
      @user.plants << @plant
    end
+   redirect_to plants_path
   end
 
   def remove
@@ -35,6 +36,7 @@ class PlantsController < ApplicationController
       @userplant.destroy
     else
     end
+    redirect_back(fallback_location: root_path)
   end
 
   # GET /plants/new

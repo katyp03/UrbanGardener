@@ -256,6 +256,13 @@ div.container {
 		height: 225px;
 		}
 	}
+	.plantdiv {
+		display: inline-block;
+		padding: 1vh;
+		form {
+			display: inline-block;
+		}
+	}
 }
 // end of user plant partial page
 

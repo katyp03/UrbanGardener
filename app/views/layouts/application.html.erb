@@ -23,20 +23,27 @@
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
-          <!-- make links redirect to sign in if not signed in -->
+          <!-- make links redirect to show sign in modal if not signed in -->
           <% if user_signed_in? %>
-          <li><a href="/<%= current_user.username %>">Profile</a></li>
-          <li><a href="/plants">Plants</a></li>
-          <li><a href="/search">Find Recipes</a></li>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <li><a href="/<%= current_user.username %>">Profile</a></li>
+            <li><a href="/plants">Plants</a></li>
+            <li><a href="/search">Find Recipes</a></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
-          <li><a href="/users/sign_in">Profile</a></li>
-          <li><a href="/users/sign_in">Plants</a></li>
-          <li><a href="/users/sign_in">Find Recipes</a></li>
-          <li><a href="/users/sign_in">Sign In</a></li>
+            <li onclick="signInModalShow()"><span class="navToModal">Profile</span></li>
+            <li onclick="signInModalShow()"><span class="navToModal">Plants</span></li>
+            <li onclick="signInModalShow()"><span class="navToModal">Find Recipes</span></li>
+            <li onclick="signInModalShow()"><span class="navToModal">Sign In</span></li>
           <% end %>
         </ul>
       </nav>
+    </div>
+    <!-- sign in/sign up modal: -->
+    <div id="signInModal">
+      <%= render file: "devise/sessions/new" %>
+      <%= render file: "devise/registrations/new" %>
+      <br>
+      <button type="button" name="button" onclick="closeModal()">Close</button><br /><br />
     </div>
     <!-- give yield a div for easier editing if needed -->
     <div class="yielddiv">

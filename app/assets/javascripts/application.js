@@ -42,12 +42,29 @@ document.addEventListener("turbolinks:load", function(){
     }
   )
 
-  $(document).ready(function(){
-          $('#nav').localScroll(800);
-          $('#intro').parallax("50%", 0.1);
-          $('#second').parallax("50%", 0.1);
-          $('.bg').parallax("30%", 0.4);
-          $('#third').parallax("50%", 0.3);
-  })
-
+  // parallax scrolling for home page
+  $('#nav').localScroll(800);
+  $('#intro').parallax("50%", 0.1);
+  $('#second').parallax("50%", 0.1);
+  $('.bg').parallax("30%", 0.4);
+  $('#third').parallax("50%", 0.3);
 });
+
+// making sign in modal show and close
+function signInModalShow(){
+  document.getElementById('signInModal').style.display = "block";
+  // document.getElementById('signUpLink').style.display = "block";
+  document.getElementById('signInLink').style.display = "none";
+  document.getElementById('signUpForm').style.display = "none";
+}
+// making sign up form render from sign in form in modal
+function signUpFormShow(){
+  document.getElementById('signInForm').style.display = "none";
+  document.getElementById('signUpLink').style.display = "none";
+  document.getElementById('signUpForm').style.display = "block";
+  document.getElementById('signInLink').style.display = "block";
+}
+// making modal close when you click "close" button
+function closeModal() {
+  document.getElementById('signInModal').style.display = "none";
+}

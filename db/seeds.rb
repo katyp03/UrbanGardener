@@ -15,3 +15,10 @@ UserPlant.create ([
 	{plant_id: 2, user_id: 1},
 	{plant_id: 2, user_id: 3}
 ])
+
+Post.create ([
+	{id: 1, user_id: 1, picture: File.new("#{Rails.root}/app/assets/images/basilpost.jpg"), caption: "Look at this lil b grow."}
+	])
+Comment.create ([
+	{id: 1, post_id: 1, user_id: 2, body: "WOW ITS GROWN!"}
+	])

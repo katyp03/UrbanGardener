@@ -33,6 +33,8 @@ rails g migration UserPlants
 rails g model user_plant
 rails g migration UserRecipe
 rails g model user_recipe
+rails g scaffold comment body:text user:belongs_to post:belongs_to
+rails g scaffold post picture:attachment caption:text user:belongs_to
 ````
 ## Adjusting Database
 ````

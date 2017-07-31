@@ -1,3 +1,5 @@
+<div id="plantForm">
+
 <%= form_with(model: plant, local: true) do |form| %>
   <% if plant.errors.any? %>
     <div id="error_explanation">
@@ -22,7 +24,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :care %>
+    <%= form.label :care %><br />
     <%= form.text_area :care, id: :plant_care %>
   </div>
 
@@ -32,7 +34,31 @@
   </div>
 
   <div class="field">
-    <%= form.label :sale %>
+    <%= form.label :Edible_or_decorative %>
+    <%= form.radio_button(:edible, true) %>
+    <%= label_tag(:edible, "Edible") %>
+    <%= form.radio_button(:edible, false) %>
+    <%= label_tag(:edible, "Decorative") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Herb %>
+    <%= form.radio_button(:herb, true) %>
+    <%= label_tag(:herb, "Yes, this is an herb") %>
+    <%= form.radio_button(:herb, false) %>
+    <%= label_tag(:herb, "No, this is not an herb") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fruit_or_Vegetable %>
+    <%= form.radio_button(:fruitveg, true) %>
+    <%= label_tag(:fruitveg, "Yes, this is a fruit or vegetable") %>
+    <%= form.radio_button(:fruitveg, false) %>
+    <%= label_tag(:fruitveg, "No, this is not a fruit or vegetable") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sale_link %>
     <%= form.text_field :sale, id: :plant_sale %>
   </div>
 
@@ -55,3 +81,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+</div>

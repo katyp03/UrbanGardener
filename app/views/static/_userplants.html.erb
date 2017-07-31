@@ -1,9 +1,9 @@
 <div id="userPlantPage">
 	<h1>My Plants</h1>
-		<% if (current_user.plants.nil? or current_user.plants == []) %>
+		<% if (@user.plants.nil? or @user.plants == []) %>
 			<h3>Add some plants to your profile to get started!</h3>
 		<% else %>
-			<% current_user.plants.each do |plant| %>
+			<% @user.plants.each do |plant| %>
 				<a class="plantPreview" href="/plants/<%= plant.id %>">
 				<%= image_tag plant.image.url %></a>
 			<% end %>

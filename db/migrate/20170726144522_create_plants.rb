@@ -8,6 +8,7 @@ class CreatePlants < ActiveRecord::Migration[5.1]
       t.string :sale
       t.integer :size
       t.attachment :image
+      t.boolean :edible
 
       t.timestamps
     end

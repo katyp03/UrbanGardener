@@ -5,7 +5,8 @@
         <span class="plantPreview">
         	<a href="/plants/<%= plant.id %>">
         	<%= image_tag plant.image.url %></a><br />
-          <%= link_to 'Add Plant', '???' %> | <%= link_to 'Remove Plant', '???' %>
+          <%= button_to 'Add Plant', plant_add_path(plant) %>
+          <%= button_to 'Remove Plant', plant_remove_path(plant) %>
           <% if user_signed_in? && current_user.admin? %>
           <br>
         	<%= link_to 'Edit', edit_plant_path(plant) %>

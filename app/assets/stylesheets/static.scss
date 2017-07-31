@@ -226,6 +226,7 @@ div.container {
 	height: 800px;
 	border: 1px solid gray;
 	text-align: center;
+	overflow-y: scroll;
 
 	.hidePlants {
 		display: block;

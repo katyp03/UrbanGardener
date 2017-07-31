@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20170726173748) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.boolean "edible"
+    t.boolean "herb"
+    t.boolean "fruitveg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

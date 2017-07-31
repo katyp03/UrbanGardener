@@ -40,9 +40,10 @@
     </div>
     <!-- sign in/sign up modal: -->
     <div id="signInModal">
-      form
+      <%= render file: "devise/sessions/new" %>
+      <%= render file: "devise/registrations/new" %>
       <br>
-      <button type="button" name="button" onclick="closeModal()">Close</button>
+      <button type="button" name="button" onclick="closeModal()">Close</button><br /><br />
     </div>
     <!-- give yield a div for easier editing if needed -->
     <div class="yielddiv">

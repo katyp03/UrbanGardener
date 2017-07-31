@@ -1,7 +1,7 @@
 <div id="userRecipePage">
 	<h1>My Recipes</h1>
 		<% if (@user.recipes.nil? or @user.recipes == []) %>
-			<h3>Save some recipes to your profile! Go to "Find Recipes" to browse.</h3>
+			<h3>Save some recipes to your profile! Go to <a href="/search">Find Recipes</a> to browse.</h3>
 		<% else %>
 			<% @user.recipes.each do |recipe| %>
 				<span class="recipePreview">

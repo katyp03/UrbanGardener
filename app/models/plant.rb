@@ -18,4 +18,34 @@ class Plant < ApplicationRecord
   		end
   	end
 
+    def to_eat
+      if (edible == true)
+        "Edible"
+      elsif (edible == false)
+        "Decorative"
+      else
+        "WE'RE SORRY, SOMETHING TERRIBLE WENT WRONG!!! WE DON'T HAVE THAT INFO!"
+      end
+    end
+
+    def is_herb
+      if (herb == true)
+        "Yes, this is an herb"
+      elsif (herb == false)
+        "No, this is not an herb"
+      else
+        "WE'RE SORRY, SOMETHING TERRIBLE WENT WRONG!!! WE DON'T HAVE THAT INFO!"
+      end
+    end
+
+    def is_fruitveg
+      if (fruitveg == true)
+        "Yes, this is a fruit or vegetable"
+      elsif (fruitveg == false)
+        "No, this is not a fruit or vegetable"
+      else
+        "WE'RE SORRY, SOMETHING TERRIBLE WENT WRONG!!! WE DON'T HAVE THAT INFO!"
+      end
+    end
+
 end

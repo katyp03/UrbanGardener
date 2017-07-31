@@ -103,3 +103,21 @@ div#signInModal {
     }
 }
 // end of sign in/sign up modal
+
+// for all forms:
+body {
+  form {
+    input[type=email], input[type=password], input[type=text], input[type=number], input[type=file] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #737373;
+        width: 200px;
+        /*color: #0C1385;*/
+        /*font-size: 20px;*/
+        /*font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;*/
+        display: block;
+        margin: auto;
+    }
+  }
+}
+// end of forms

@@ -4,9 +4,9 @@
 			<h3>Save some recipes to your profile! Go to <a href="/search">Find Recipes</a> to browse.</h3>
 		<% else %>
 			<% @user.recipes.each do |recipe| %>
-				<span class="recipePreview">
+				<a class="recipePreview" href="<%= recipe.rsite %>">
 				<%= image_tag recipe.rpic %><br />
-				<%= recipe.title %></span>
+				<%= recipe.title %></a>
 			<% end %>
 		<% end %>
 </div>

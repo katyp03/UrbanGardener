@@ -1,5 +1,6 @@
 class PlantsController < ApplicationController
   before_action :set_plant, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /plants
   # GET /plants.json
@@ -10,6 +11,24 @@ class PlantsController < ApplicationController
   # GET /plants/1
   # GET /plants/1.json
   def show
+  end
+
+  def add
+   @user = current_user
+   @plant = Plant.find(params[:id])
+   if UserPlant.find_by(plant_id: params[:id], user_id: current_user.id)
+   else
+     @user.plants << @plant
+   end
+  end
+
+  def remove
+    @plant = Plant.find(params[:id])
+    @userplant = UserPlant.find_by(plant_id: params[:id], user_id: current_user.id)
+    unless @userplant.nil?
+      @userplant.destroy
+    else
+    end
   end
 
   # GET /plants/new

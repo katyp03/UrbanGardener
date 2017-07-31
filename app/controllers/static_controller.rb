@@ -8,4 +8,8 @@ class StaticController < ApplicationController
     @user = User.find_by_username(params[:username])
   end
 
+  def feed
+    @posts = Post.all
+  end
+
 end

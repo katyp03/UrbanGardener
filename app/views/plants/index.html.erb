@@ -5,12 +5,20 @@
         <span class="plantPreview">
         	<a href="/plants/<%= plant.id %>">
         	<%= image_tag plant.image.url %></a><br />
+          <%= button_to 'Add Plant', plant_add_path(plant) %>
+          <%= button_to 'Remove Plant', plant_remove_path(plant) %>
+          <% if user_signed_in? && current_user.admin? %>
+          <br>
         	<%= link_to 'Edit', edit_plant_path(plant) %>
         	<%= link_to 'Destroy', plant, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% else %>
+          <% end %>
         </span>
   <% end %>
 
 <br />
-
+<% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Plant', new_plant_path %>
+<% else %>
+<% end %>
 </div>

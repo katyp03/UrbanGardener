@@ -226,6 +226,7 @@ div.container {
 	height: 800px;
 	border: 1px solid gray;
 	text-align: center;
+	overflow-y: scroll;
 
 	.hidePlants {
 		display: block;
@@ -273,3 +274,23 @@ div.container {
 	}
 }
 // end of user post partial page
+
+// Feed Page
+.feeddiv {
+	background-color: rgba(0,190,90,0.2);
+	border-radius: 25px;
+	margin-top: 5vh;
+	height: 70vh;
+	overflow-y: scroll;
+	text-align: center;
+	.feeditem {
+		padding: 2vh 2vw;
+		text-align: center;
+		display: inline-block;
+		.feedpic {
+			width: 200px;
+			height: 200px;
+			border-radius: 200px;
+		}
+	}
+}

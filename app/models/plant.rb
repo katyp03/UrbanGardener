@@ -7,12 +7,14 @@ class Plant < ApplicationRecord
   	validates :size, presence: true, numericality: { in: 0..2 }
 
   	def to_word
-  		if (:size== 0)
-  			puts "Small"
-  		elsif (:size== 1)
-  			puts "Medium"
-  		elsif (:size== 2)
-  			puts "Large"
+  		if (size === 0)
+  			"Small"
+  		elsif (size === 1)
+  			"Medium"
+  		elsif (size === 2)
+  			"Large"
+			else
+				"WE'RE SORRY, SOMETHING TERRIBLE WENT WRONG!!! WE DON'T HAVE THAT INFO!"
   		end
   	end
 

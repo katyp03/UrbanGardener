@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get '/search' => 'search#index'
   # for the search function on the search page
   post '/search' => 'search#index'
+  get '/feed' => 'static#feed'
+  post '/plants/:id/add' => 'plants#add', as: :plant_add
+  post '/plants/:id/remove' => 'plants#remove', as: :plant_remove
   # gives users a customized paged based on username and also sets a profile_path
   get '/:username' => 'static#profile', as: :profile
+  get '/feed' => 'static#feed'
 end

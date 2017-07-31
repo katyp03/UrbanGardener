@@ -269,7 +269,7 @@ div.container {
 // start of user post partial page, and some user recipe partial page and user plant partial page:
 #userPostPage, #userRecipePage {
 
-	a.postPreview, span.recipePreview {
+	a.postPreview, a.recipePreview {
 		width: 300px;
 		height: 300px;
 		display: inline-block;

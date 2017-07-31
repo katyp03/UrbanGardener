@@ -58,14 +58,14 @@ function signInModalShow(){
   document.getElementById('signInLink').style.display = "none";
   document.getElementById('signUpForm').style.display = "none";
 }
-
+// making sign up form render from sign in form in modal
 function signUpFormShow(){
   document.getElementById('signInForm').style.display = "none";
   document.getElementById('signUpLink').style.display = "none";
   document.getElementById('signUpForm').style.display = "block";
   document.getElementById('signInLink').style.display = "block";
 }
-
+// making modal close when you click "close" button
 function closeModal() {
   document.getElementById('signInModal').style.display = "none";
 }

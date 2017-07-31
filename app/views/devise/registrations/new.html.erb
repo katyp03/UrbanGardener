@@ -34,10 +34,12 @@
     <%= f.text_field :hometown %>
   </div>
 
-  <div class="field">
-    <%= f.label "Profile Picture" %><br />
-    <%= f.file_field :propic %>
-  </div>
+  <span id="formProPic">
+    <div class="field">
+      <%= f.label "Upload Profile Picture:" %><br />
+      <%= f.file_field :propic %>
+    </div>
+  </span>
 
   <div class="field">
     <%= f.label :password %>

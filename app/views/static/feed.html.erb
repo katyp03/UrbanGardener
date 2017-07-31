@@ -1,0 +1,10 @@
+<div class="feeddiv col-md-offset-3 col-md-6">
+  <h2>Feed</h2>
+  <% @posts.order( id: :desc ).each do |post| %>
+    <div class="feeditem">
+      <%= image_tag post.picture.url(:medium), class: "feedpic" %><br>
+      <a href="/posts/<%= post.id %>"><%= post.caption %></a><br>
+      <strong><a href="/<%= post.user.username %>"><%= post.user.username %></a></strong>
+    </div>
+  <% end %>
+</div>

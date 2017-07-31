@@ -6,7 +6,10 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-
+  
+  def self.recent( num = 10 )
+    self.order( id: :desc ).limit( num )
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show

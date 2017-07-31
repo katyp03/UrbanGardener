@@ -22,7 +22,7 @@
 
 <p>
   <strong>Size:</strong>
-  <%= @plant.size.to_word %>
+  <%= @plant.to_word %>
 </p>
 
 <p>
@@ -37,7 +37,9 @@
   </div>
 
 <br />
-<%= link_to 'Edit', edit_plant_path(@plant) %> |
-<%= link_to 'Back', plants_path %>
-
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Edit', edit_plant_path(@plant) %> |
+  <%= link_to 'Back', plants_path %>
+<% else %>
+<% end %>
 </div>

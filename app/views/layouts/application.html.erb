@@ -28,11 +28,13 @@
             <li><a href="/<%= current_user.username %>">Profile</a></li>
             <li><a href="/plants">Plants</a></li>
             <li><a href="/search">Find Recipes</a></li>
+            <li><a href="/feed">Feed</a></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
           <% else %>
             <li onclick="signInModalShow()"><span class="navToModal">Profile</span></li>
             <li onclick="signInModalShow()"><span class="navToModal">Plants</span></li>
             <li onclick="signInModalShow()"><span class="navToModal">Find Recipes</span></li>
+            <li><a href="/feed">Feed</a></li>
             <li onclick="signInModalShow()"><span class="navToModal">Sign In</span></li>
           <% end %>
         </ul>

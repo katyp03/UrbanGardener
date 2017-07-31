@@ -12,18 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture, id: :post_picture %>
+    <%= form.label "Upload Picture:" %><br />
+    <%= form.file_field :picture %>
   </div>
 
   <div class="field">
-    <%= form.label :caption %>
-    <%= form.text_field :caption, id: :post_caption %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :post_user_id %>
+    <%= form.text_field :caption, id: :post_caption, placeholder: "Caption" %>
   </div>
 
   <div class="actions">

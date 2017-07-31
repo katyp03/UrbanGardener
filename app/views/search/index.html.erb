@@ -31,7 +31,9 @@
           <div class="resultname"><%= course["title"] %></div>
         </div>
       <% end %>
-        <div class="addrecipe">Add Recipe</div>
+        <div class="addrecipe"><%= button_to "Add Recipe", { action: 'add', controller: 'recipe',  method: :post, params: {
+            f_id: course["recipe_id"], f2f_url: course["f2f_url"], image_url: course["image_url"], title: course["title"]
+          } }, remote: true %></div>
 
     <% end %>
     <% end %>

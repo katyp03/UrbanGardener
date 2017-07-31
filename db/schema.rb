@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170726173748) do
     t.string "rsite"
     t.string "title"
     t.string "rpic"
+    t.integer "f2f_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

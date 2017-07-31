@@ -5,7 +5,7 @@
 		<% else %>
 			<% @user.recipes.each do |recipe| %>
 				<span class="recipePreview">
-				<%= image_tag recipe.rpic.url %><br />
+				<%= image_tag recipe.rpic %><br />
 				<%= recipe.title %></span>
 			<% end %>
 		<% end %>

@@ -4,8 +4,11 @@
 			<h3>Add some plants to your profile to get started!</h3>
 		<% else %>
 			<% @user.plants.each do |plant| %>
+			<div class="plantdiv">
 				<a class="plantPreview" href="/plants/<%= plant.id %>">
-				<%= image_tag plant.image.url %></a>
+				<%= image_tag plant.image.url %></a><br>
+				<%= button_to 'Remove Plant', plant_remove_path(plant) %>
+			</div>
 			<% end %>
 		<% end %>
 </div>

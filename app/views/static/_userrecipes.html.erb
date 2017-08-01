@@ -1,5 +1,7 @@
 <div id="userRecipePage">
 	<h1>My Recipes</h1>
+
+	<% if current_user == @user %>
 		<% if (@user.recipes.nil? or @user.recipes == []) %>
 			<h3>Save some recipes to your profile! Go to <a href="/search">Find Recipes</a> to browse.</h3>
 		<% else %>
@@ -12,4 +14,18 @@
 				</span>
 			<% end %>
 		<% end %>
+
+	<% else %>
+		<% if (@user.recipes.nil? or @user.recipes == []) %>
+			<h3>Sorry, I have no recipes yet!</h3>
+		<% else %>
+			<% @user.recipes.each do |recipe| %>
+				<span class ="recipeDiv">
+					<a class="recipePreview" href="<%= recipe.rsite %>">
+						<%= image_tag recipe.rpic %><br />
+						<%= recipe.title %></a><br />
+				</span>
+			<% end %>
+		<% end %>
+	<% end %>
 </div>

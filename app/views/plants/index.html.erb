@@ -1,6 +1,9 @@
 <div id="plantIndexPage">
 <h1>Plants</h1>
-
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to 'Add New Plant', new_plant_path, class: "newplantlink" %><br><br>
+<% else %>
+<% end %>
   <% @plants.each do |plant| %>
         <span class="plantPreview">
         	<a href="/plants/<%= plant.id %>">
@@ -21,9 +24,4 @@
         </span>
   <% end %>
 
-<br />
-<% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'New Plant', new_plant_path %>
-<% else %>
-<% end %>
 </div>

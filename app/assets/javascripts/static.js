@@ -4,7 +4,7 @@ document.addEventListener("turbolinks:load", function(){
 	const elMyPostsLink = document.querySelector('.myPostsLink');
 	const elMyRecipesLink = document.querySelector('.myRecipesLink');
 	const elNewPostButton = document.querySelector('.newPostButton');
-	const elEditPostButton = document.querySelector('.hideEditPost');
+	const elEditPostButton = document.querySelectorAll('.editPostButton');
 	if(elMyPlantsLink) {
 		// render user plants page and hide user posts and recipes when nav link is clicked:
 		elMyPlantsLink.addEventListener("click", function(){

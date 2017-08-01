@@ -1,12 +1,14 @@
-<% if current_user == @post.user %>
-  <h1>Editing Post</h1>
+<div class="postdiv col-md-offset-3 col-md-6">
+  <% if current_user == @post.user %>
+    <h1>Editing Post</h1>
 
-  <%= render 'form', post: @post %>
+    <%= render 'form', post: @post %>
 
-  <%= link_to 'Show', @post %> |
-  <%= link_to 'Back', posts_path %>
-<% else %>
-  <center>
-    This isn't your post to edit!!!
-  </center>
-<% end %>
+    <%= link_to 'Show', @post %> |
+    <%= link_to 'Back', posts_path %>
+  <% else %>
+    <center>
+      This isn't your post to edit!!!
+    </center>
+  <% end %>
+</div>

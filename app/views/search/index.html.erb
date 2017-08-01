@@ -2,16 +2,23 @@
   <% if user_signed_in? %>
     <div class="searchplants col-md-2">
       <h3>My plants:</h3>
-      <!-- Build out a searchform -->
-      <%= form_tag(search_path, :method => "post", id: "search-form") do %>
-      <!-- list out every plant by user -->
-        <% current_user.plants.where(:edible => true).each do |plant| %>
-        <!-- create checkbox for search terms based on plants selected -->
-          <%= check_box_tag :'looking_for[]', params[:looking_for], {:multiple => true}, value: plant.name %>
-          <%= label_tag :to, plant.name %><br>
+
+      <% unless current_user.plants.where(:edible => true).blank? %>
+        <!-- Build out a searchform -->
+        <%= form_tag(search_path, :method => "post", id: "search-form") do %>
+        <!-- list out every plant by user -->
+          <% current_user.plants.where(:edible => true).each do |plant| %>
+          <!-- create checkbox for search terms based on plants selected -->
+            <%= check_box_tag :'looking_for[]', params[:looking_for], {:multiple => true}, value: plant.name %>
+            <%= label_tag :to, plant.name %><br>
+          <% end %>
+          <%= submit_tag "Search", :name => nil %>
         <% end %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
+        <% else %>
+          Sorry, you don't have any edible plants right now. Click <a href="/plants">here</a> to add some plants!
+        <% end %>
+
+
     </div>
   <% else %>
   <% end %>

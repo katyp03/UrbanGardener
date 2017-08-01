@@ -5,7 +5,7 @@
       <!-- Build out a searchform -->
       <%= form_tag(search_path, :method => "post", id: "search-form") do %>
       <!-- list out every plant by user -->
-        <% current_user.plants.each do |plant| %>
+        <% current_user.plants.where(:edible => true).each do |plant| %>
         <!-- create checkbox for search terms based on plants selected -->
           <%= check_box_tag :'looking_for[]', params[:looking_for], {:multiple => true}, value: plant.name %>
           <%= label_tag :to, plant.name %><br>

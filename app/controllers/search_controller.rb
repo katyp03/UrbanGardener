@@ -2,7 +2,7 @@ class SearchController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @userplant = current_user.plants
+    @userplant = current_user.plants.where(:edible => true)
     @userplants = []
     @userplant.each do |plant|
       @userplants.push(plant.name)

@@ -1,8 +1,8 @@
 <div id="userPostPage">
 	<h1>My Posts</h1>
-		<% if (@user.posts.nil? or @user.posts == []) %>
-			<h3>Add a post to your profile!</h3><br />
-			<!-- 'new post' button/link -->
+	<% if current_user == @user %>
+		<% if (current_user == @user && @user.posts.nil? or @user.posts == []) %>
+			<h3>Add some posts to your profile!</h3>
 			<button type="button" name="button" class="newPostButton">New Post</button>
 		<% else %>
 			<!-- 'new post' button/link -->
@@ -12,5 +12,15 @@
 				<%= post.caption %></a>
 			<% end %>
 		<% end %>
-
+	<% else %>
+		<% if (current_user == @user && @user.posts.nil? or @user.posts == []) %>
+			<h3>Sorry, I dont have any posts yet!</h3>
+		<% else %>
+			<% @user.posts.each do |post| %>
+				<a class="postPreview" href="/posts/<%= post.id %>">
+				<%= image_tag post.picture.url %><br />
+				<%= post.caption %></a>
+			<% end %>
+		<% end %>
+	<% end %>
 </div>

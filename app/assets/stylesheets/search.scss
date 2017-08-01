@@ -12,6 +12,9 @@
     border-radius: 25px;
     position: fixed;
     overflow-y: scroll;
+    margin-left: 5vw;
+    padding: 3vh 3vw;
+    box-shadow: 2px 2px 2px;
     form {
       input {
         display: inline-block;
@@ -29,7 +32,7 @@
       font-size: 8px;
     }
     .searchresult {
-      background-color: rgba(0,255,90,0.2);
+      background-color: rgba(0,200,90,0.2);
       margin: 5px;
       width: 80%;
       display: inline-block;

@@ -1,29 +1,30 @@
 <p id="notice"><%= notice %></p>
+<div class="postdiv col-md-offset-3 col-md-6"
+  <p>
+    <%= image_tag @post.picture.url(:medium) %>
+  </p>
 
-<p>
-  <%= image_tag @post.picture.url(:medium) %>
-</p>
+  <p>
+    <strong><%= @post.caption %></strong>
+  </p>
 
-<p>
-  <strong><%= @post.caption %></strong>
-</p>
+  <p>
+    - @<a href="/<%= @post.user.username %>"><%= @post.user.username %></a>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user.username %>
-</p>
-
-<ul>
-  <% @post.comments.each do |comment| %>
-  <li><%= comment.body %> - @<%= comment.user.username %></li>
+  <h3>Comments:</h3>
+  <ul>
+    <% @post.comments.each do |comment| %>
+    <li><%= comment.body %> - @<a href="/<%= comment.user.username %>"><%= comment.user.username %></a></li>
+    <% end %>
+  </ul>
+  <% if user_signed_in? %>
+    <%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
+  <% else %>
   <% end %>
-</ul>
-<% if user_signed_in? %>
-  <%= render 'comments/form', comment: Comment.new(post_id: @post.id) %>
-<% else %>
-<% end %>
-<% if current_user == @post.user %>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-<% else %>
-<% end %>
+  <% if current_user == @post.user %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+  <%= link_to 'Back', posts_path %>
+  <% else %>
+  <% end %>
+</div>

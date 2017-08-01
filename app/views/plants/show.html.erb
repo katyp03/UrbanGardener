@@ -60,7 +60,7 @@
 <br />
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'Edit', edit_plant_path(@plant) %> |
-  <%= link_to 'Back', plants_path %>
+  <%= link_to 'Back To All Plants', plants_path %>
 <% else %>
 <% end %>
 </div>

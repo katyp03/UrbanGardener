@@ -299,6 +299,13 @@ div.container {
 		display: inline-block;
 	}
 }
+
+.hideNewPost {
+	input {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+}
 // end of user post partial page
 
 // Feed Page

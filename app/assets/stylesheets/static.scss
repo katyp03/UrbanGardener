@@ -228,21 +228,21 @@ div.container {
 	text-align: center;
 	overflow-y: scroll;
 
-	.hidePlants {
-		display: block;
-	}
+	// .hidePlants {
+	// 	display: block;
+	// }
 
-	.hidePosts {
-		display: none;
-	}
+	// .hidePosts {
+	// 	display: none;
+	// }
 
-	.hideRecipes {
-		display: none;
-	}
+	// .hideRecipes {
+	// 	display: none;
+	// }
 
-	.hidePostNew {
-		display: none;
-	}
+	// .hidePostNew {
+	// 	display: none;
+	// }
 }
 
 }
@@ -309,4 +309,11 @@ div.container {
 			border-radius: 200px;
 		}
 	}
+}
+
+.profile_panel {
+	display: none;
+}
+.profile_panel.active {
+	display: block;
 }

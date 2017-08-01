@@ -22,10 +22,10 @@
 	</div>
 	<!-- div where pages render for a user's saved plants, posts, and recipes; renders the plants first, when page loads -->
 	<div id="userRenderDiv" class="col-md-offset-3 col-md-9">
-		<span class="hidePlants"><%= render 'userplants', static: @static %></span>
-		<span class="hidePosts"><%= render 'userposts', static: @static %></span>
-		<span class="hideRecipes"><%= render 'userrecipes', static: @static %></span>
-		<span class="hideNewPost">
+		<span class="profile_panel hidePlants<%= " active" unless params[:page] == "post" %>"><%= render 'userplants', static: @static %></span>
+		<span class="profile_panel hidePosts<%= " active" if params[:page] == "post" %>"><%= render 'userposts', static: @static %></span>
+		<span class="profile_panel hideRecipes"><%= render 'userrecipes', static: @static %></span>
+		<span class="profile_panel hideNewPost">
 		<h1>New Post</h1><br />
 		<%= render 'posts/form', post: Post.new %></span>
 	</div>

@@ -8,6 +8,10 @@
 		<div id="nameDiv" class="col-md-3">
 			<span id="username"><strong><%= @user.username %></strong></span><br />
 			<span id="userFullName"><%= @user.full_name %></span><br />
+			<% if current_user == @user %>
+			<p><a href="/users/edit">Edit/Delete Profile</a></p>
+			<% else %>
+			<% end %>
 		</div>
 		<div id="userAboutDiv" class="col-md-5">
 			<span id="userHometown"><i><%= @user.hometown %></i></span><br /><br />

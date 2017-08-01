@@ -18,6 +18,7 @@ class RecipeController < ApplicationController
   end
 
   def remove
+    @user = current_user
     @recipe = Recipe.find(params[:id])
     @userrecipe = UserRecipe.find_by(recipe_id: params[:id], user_id: current_user.id)
     unless @userrecipe.nil?
@@ -25,7 +26,7 @@ class RecipeController < ApplicationController
     else
     end
     # @userrecipe = UserRecipe.find_by(recipe_id: params[:f_id], user_id: current_user.id)
-    redirect_back(fallback_location: root_path)
+    redirect_to profile_path(@user.username,:recipe)
   end
 
 end

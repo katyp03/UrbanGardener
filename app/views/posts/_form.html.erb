@@ -19,9 +19,10 @@
   <div class="field">
     <%= form.text_field :caption, id: :post_caption, placeholder: "Caption" %>
   </div><br />
-
+<% if user_signed_in? %>
   <%= form.hidden_field :user_id, id: current_user.id, value: current_user.id %>
-
+<% else %>
+<% end%>
   <div class="actions">
     <%= form.submit %>
   </div>

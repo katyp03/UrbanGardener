@@ -26,8 +26,13 @@
 		<span class="profile_panel hidePosts<%= " active" if params[:page] == "post" %>"><%= render 'userposts', static: @static %></span>
 		<span class="profile_panel hideRecipes"><%= render 'userrecipes', static: @static %></span>
 		<span class="profile_panel hideNewPost">
-		<h1>New Post</h1><br />
-		<%= render 'posts/form', post: Post.new %></span>
+			<h1>New Post</h1><br />
+			<%= render 'posts/form', post: Post.new %>
+		</span>
+		<span class="profile_panel hideEditPost">
+			<h1>Edit Post</h1><br />
+			<%= render 'posts/form', post: post_path(post.id), method: update %>
+		</span>
 	</div>
 
 </div>

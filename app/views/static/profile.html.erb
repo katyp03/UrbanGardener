@@ -25,7 +25,9 @@
 		<span class="hidePlants"><%= render 'userplants', static: @static %></span>
 		<span class="hidePosts"><%= render 'userposts', static: @static %></span>
 		<span class="hideRecipes"><%= render 'userrecipes', static: @static %></span>
-		<span class="hideNewPost"><%= render 'posts/form', post: Post.new %></span>
+		<span class="hideNewPost">
+		<h1>New Post</h1><br />
+		<%= render 'posts/form', post: Post.new %></span>
 	</div>
 
 </div>

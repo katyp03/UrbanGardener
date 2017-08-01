@@ -14,7 +14,7 @@
 		<% end %>
 	<% else %>
 		<% if (current_user == @user && @user.posts.nil? or @user.posts == []) %>
-			<h3>Sorry, I dont have any posts yet!</h3>
+			<h3>Sorry, I don't have any posts yet!</h3>
 		<% else %>
 			<% @user.posts.each do |post| %>
 				<a class="postPreview" href="/posts/<%= post.id %>">

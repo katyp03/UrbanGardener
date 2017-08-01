@@ -55,12 +55,10 @@
   <div id="plantShowPic" class="col-sm-6">
   <!-- <%# @plant.image %> -->
   <%= image_tag @plant.image.url %>
+  <% if user_signed_in? && current_user.admin? %>
+  <br>
+    <%= link_to 'Edit', edit_plant_path(@plant) %> |
+    <%= link_to 'Back To All Plants', plants_path %>
+  <% else %>
+  <% end %>
   </div>
-
-<br />
-<% if user_signed_in? && current_user.admin? %>
-  <%= link_to 'Edit', edit_plant_path(@plant) %> |
-  <%= link_to 'Back To All Plants', plants_path %>
-<% else %>
-<% end %>
-</div>

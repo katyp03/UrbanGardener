@@ -244,6 +244,7 @@ div.container {
 		background-color: rgba( 0,0,0,0.2);
 		border-radius: 5vw;
 		font-size: 3vh;
+		font-family: 'Quando', serif;
 
 	}
 }
@@ -333,4 +334,8 @@ div.container {
 }
 .profile_panel.active {
 	display: block;
+}
+h1 {
+	font-family: 'Merienda One', cursive;
+	font-size: 5vh;
 }

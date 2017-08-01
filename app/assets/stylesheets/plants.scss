@@ -17,8 +17,16 @@
 
 		strong.plantName {
 			font-size: 40px;
+			font-family: 'Merienda One', cursive;
 		}
-
+		p {
+			font-family: 'IM Fell English', serif;
+			font-size: 2vh;
+			line-height: 3vh;
+			strong {
+				color: green;
+			}
+		}
 		a.buyLink {
 			cursor: pointer;
 		}
@@ -27,9 +35,14 @@
 	#plantShowPic {
 		width: 40%;
 		padding-left: 60px;
+		text-align: center;
 		img {
 			height: 50vh;
-			padding-left: 20px; 
+			padding-left: 20px;
+			margin-bottom: 2vh;
+		}
+		a {
+			font-size: 2vh;
 		}
 	}
 }

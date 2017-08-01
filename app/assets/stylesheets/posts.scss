@@ -6,12 +6,16 @@
   background-color: rgba(0,190,90,0.2);
   border-radius: 25px;
   margin-top: 5vh;
+  margin-bottom: 2vh;
     img {
       padding-top: 2vh;
     }
-  ul {
-    list-style: none;
-    li{
+    ul {
+      list-style: none;
+      li{
+      }
+    input {
+      padding-bottom: 10px;
     }
   }
 }

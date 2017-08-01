@@ -1,10 +1,10 @@
 <div class="postdiv col-md-offset-3 col-md-6">
   <% if current_user == @post.user %>
-    <h1>Editing Post</h1>
+    <h1>Editing Post</h1><br />
 
     <%= render 'form', post: @post %>
 
-    <%= link_to 'Go back to post', @post %>
+    <%= link_to 'Go back to post', @post %><br />
   <% else %>
     <center>
       This isn't your post to edit!!!

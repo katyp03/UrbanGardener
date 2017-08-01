@@ -45,6 +45,12 @@
   <a href="<%= @plant.sale %>" class="buyLink">Get Seeds</a>
 </p>
 
+<% if UserPlant.find_by(plant_id: @plant.id, user_id: current_user.id) %>
+  <%= button_to 'Remove From My Plants', plant_remove_path(@plant) %>
+<% else %>
+  <%= button_to 'Add To My Plants', plant_add_path(@plant) %>
+<% end %>
+
   </div>
   <div id="plantShowPic" class="col-sm-6">
   <!-- <%# @plant.image %> -->

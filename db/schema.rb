@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(version: 20170726173748) do
     t.index ["user_id"], name: "index_user_plants_on_user_id"
   end
 
-  create_table "user_recipes", id: false, force: :cascade do |t|
+  create_table "user_recipes", force: :cascade do |t|
     t.integer "user_id"
     t.integer "recipe_id"
     t.datetime "created_at", null: false

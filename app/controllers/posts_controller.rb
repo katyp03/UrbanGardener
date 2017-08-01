@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to profile_path(@user.username,:post) }
+        format.html { redirect_to profile_path(current_user.username,:post) }
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }

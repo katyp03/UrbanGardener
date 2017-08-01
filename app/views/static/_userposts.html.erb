@@ -1,6 +1,6 @@
 <div id="userPostPage">
 	<h1>My Posts</h1>
-	<% if current_user == @user %>
+	<% if user_signed_in? && current_user == @user %>
 		<% if (current_user == @user && @user.posts.nil? or @user.posts == []) %>
 			<h3>Add some posts to your profile!</h3>
 			<button type="button" name="button" class="newPostButton">New Post</button>

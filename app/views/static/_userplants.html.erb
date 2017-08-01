@@ -1,6 +1,6 @@
 <div id="userPlantPage">
 	<h1>My Plants</h1>
-	<% if current_user == @user %>
+	<% if user_signed_in? && current_user == @user %>
 		<% if (@user.plants.nil? or @user.plants == []) %>
 			<h3><a href="/plants">Add some plants</a> to your profile to get started!</h3>
 		<% else %>

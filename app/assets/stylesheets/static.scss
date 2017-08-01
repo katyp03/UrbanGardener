@@ -224,23 +224,35 @@ div.container {
 
 #userNavDiv {
 	height: 350px;
-	background: linear-gradient(#8cd98c , #ecf8ec);
-	border-radius: 50px;
+	background-image: url('/assets/shelf.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*background: linear-gradient(#8cd98c , #ecf8ec);*/
+	/*border-radius: 50px;*/
+	border: 1px solid black;
+	box-shadow: 2px 2px 2px;
 	position: fixed;
 	overflow-y: scroll;
+	text-align: center;
 
 	h3 {
-		padding-left: 10px;
-		padding-top: 30px;
+		/*padding-left: 3vw;*/
+		padding: 15px;
 		cursor: pointer;
+		text-shadow: 2px 2px 2px white;
+		background-color: rgba( 0,0,0,0.2);
+		border-radius: 5vw;
+		font-size: 3vh;
+
 	}
 }
 
 #userRenderDiv {
-	height: 800px;
-	border: 1px solid gray;
+	/*height: 800px;*/
+	/*border: 1px solid gray;*/
 	text-align: center;
-	overflow-y: scroll;
+	/*overflow-y: scroll;*/
 }
 
 }

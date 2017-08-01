@@ -32,6 +32,7 @@ document.addEventListener("turbolinks:load", function(){
 		});
 	};
 	if(elNewPostButton) {
+		document.querySelectorAll('.hideNewPost').forEach(element => element.style.display="none");
 		// render new post page and hide user recipes and plants, and userposts when nav link is clicked:
 		elNewPostButton.addEventListener("click", function(){
 			document.querySelectorAll(".hideNewPost").forEach(element => element.style.display="block");

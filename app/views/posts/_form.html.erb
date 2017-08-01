@@ -20,6 +20,8 @@
     <%= form.text_field :caption, id: :post_caption, placeholder: "Caption" %>
   </div>
 
+  <%= form.hidden_field :user_id, id: current_user.id, value: current_user.id %>
+
   <div class="actions">
     <%= form.submit %>
   </div>

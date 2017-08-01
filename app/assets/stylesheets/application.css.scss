@@ -124,3 +124,19 @@ body {
   }
 }
 // end of forms
+
+// for edit user form:
+#editUserDiv {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 22px;
+
+  div.field {
+    margin-bottom: 14px;
+
+    label {
+      margin-bottom: 1px;
+    }
+  }
+}
+// end of edit user form

@@ -18,13 +18,13 @@ class RecipeController < ApplicationController
   end
 
   def remove
-    @recipe = Recipe.find_by(:f2f_id => params[:f_id])
-    @userrecipe = UserPlant.find_by(plant_id: params[:id], user_id: current_user.id)
+    @recipe = Recipe.find(params[:id])
+    @userrecipe = UserRecipe.find_by(recipe_id: params[:id], user_id: current_user.id)
     unless @userrecipe.nil?
       @userrecipe.destroy
     else
     end
-    @userrecipe = UserRecipe.find_by(recipe_id: params[:f_id], user_id: current_user.id)
+    # @userrecipe = UserRecipe.find_by(recipe_id: params[:f_id], user_id: current_user.id)
     redirect_back(fallback_location: root_path)
   end
 

@@ -3,7 +3,9 @@
 	<% if current_user == @user %>
 		<% if (current_user == @user && @user.posts.nil? or @user.posts == []) %>
 			<h3>Add some posts to your profile!</h3>
+			<button type="button" name="button" class="newPostButton">New Post</button>
 		<% else %>
+			<!-- 'new post' button/link -->
 			<% @user.posts.each do |post| %>
 				<a class="postPreview" href="/posts/<%= post.id %>">
 				<%= image_tag post.picture.url %><br />

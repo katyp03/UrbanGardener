@@ -13,7 +13,7 @@
 				<div class="postPreview">
 				<%= image_tag post.picture.url %><br />
 				<%= post.caption %></a><br>
-				<a href="/posts/<%= post.id %>/edit">Edit</a> | <%= link_to 'Delete', post, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></div>
+				<button type="button" name="button" class="editPostButton">Edit Post</button> | <%= link_to 'Delete', post, method: :delete, remote: true, data: { confirm: 'Are you sure?' } %></div>
 			<% end %>
 		<% end %>
 	<% else %>

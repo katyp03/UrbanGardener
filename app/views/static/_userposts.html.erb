@@ -6,6 +6,8 @@
 			<button type="button" name="button" class="newPostButton">New Post</button>
 		<% else %>
 			<!-- 'new post' button/link -->
+			<button type="button" name="button" class="newPostButton">New Post</button>
+			<br>
 			<% @user.posts.each do |post| %>
 				<a class="postPreview" href="/posts/<%= post.id %>">
 				<%= image_tag post.picture.url %><br />

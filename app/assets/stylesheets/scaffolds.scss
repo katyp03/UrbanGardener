@@ -24,13 +24,13 @@ div {
   }
 }
 
-#notice {
-  color: green;
-}
+// #notice {
+//   color: green;
+// }
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: green;
   display: table;
   text-align: center;
   margin: 0 auto;
@@ -38,7 +38,7 @@ div {
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid green;
   padding: 7px 7px 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
@@ -51,7 +51,7 @@ div {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px -7px 0;
-    background-color: #c00;
+    background-color: green;
     color: #fff;
   }
 
